@@ -2,7 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-void mostrarPersonas(char* nombres[],int n);
+void MostrarPersonas(char* nombres[],int n);
+void BuscarNombre(char* nombres[],int n);
 int main(){
     char* nombres[5];
     char* buff;
@@ -15,12 +16,21 @@ int main(){
     
     };
     free(buff);
-    mostrarPersonas(nombres,5);
+    MostrarPersonas(nombres,5);
+    BuscarNombre(nombres,3);
     return 0;
 } 
 
-void mostrarPersonas(char* nombres[],int n){
+void MostrarPersonas(char* nombres[],int n){
     for(int i =0;i<n;i++){
-        printf("\n%s",nombres[i]);
+        printf("\n[%d]:%s",i,nombres[i]);
+    }
+}
+
+void BuscarNombre(char* nombres[],int n){
+    if(n<=4 &&n>=0){
+        printf("\n%s",nombres[n]);
+    }else{
+        printf ("no se encontro el valor buscado");
     }
 }
