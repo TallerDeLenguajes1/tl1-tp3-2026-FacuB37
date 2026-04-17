@@ -26,10 +26,10 @@ int main (){
     srand(time(NULL));
     int CantClientes=0;
     char* buff=(char *) malloc(100*sizeof(char));
-    while(CantClientes>5 || CantClientes <=0){
-        printf("cantidad de clientes (MAX:5):");
-        scanf("%d",&CantClientes);
-    }
+
+    printf("cantidad de clientes:");
+    scanf("%d",&CantClientes);
+    
 
     cliente* Clientes= (cliente*)malloc(sizeof(cliente)*CantClientes);
 
